@@ -61,7 +61,7 @@ public class Game {
         p.bets(input.nextInt());
         while (p.getBet() > 5 || p.getBet() < 1)
         {
-            System.out.print("Please place a bet between  1 - 5: ");
+            System.out.print("Please a number between 1 ~ 5: ");
             p.bets(input.nextInt());
         }
         for (int i = 0; i < 5; i++)
@@ -295,7 +295,7 @@ public class Game {
             answer = input.next();
             while (!answer.equals("yes") && !answer.equals ("no"))
             {
-                System.out.print("Please say yes or no: ");
+                System.out.print("Please enter yes or no: ");
                 answer = input.next();
             }
             if (answer.equals ("yes"))
@@ -312,7 +312,7 @@ public class Game {
         answer = input.next();
         while (!answer.equals("yes") && !answer.equals ("no"))
             {
-                System.out.print("Please say yes or no: ");
+                System.out.print("Please enter yes or no: ");
                 answer = input.next();
             }
         if (answer.equals ("yes"))

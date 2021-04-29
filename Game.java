@@ -61,7 +61,7 @@ public class Game {
         p.bets(input.nextInt());
         while (p.getBet() > 5 || p.getBet() < 1)
         {
-            System.out.print("Please a number between 1 ~ 5: ");
+            System.out.print("Please enter a number between 1 ~ 5: ");
             p.bets(input.nextInt());
         }
         for (int i = 0; i < 5; i++)

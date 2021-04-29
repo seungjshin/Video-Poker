@@ -138,7 +138,7 @@ public class Game {
         }
     }
     
-	private String toString(){//Print out the hand of the player.
+	public String toString(){//Print out the hand of the player.
         String cardinhand = "You currently have:\n";
         for (Card element: hand)
         {

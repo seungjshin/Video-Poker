@@ -138,7 +138,7 @@ public class Game {
         }
     }
     
-	public String toString(){//Print out the hand of the player.
+	private String toString(){//Print out the hand of the player.
         String cardinhand = "You currently have:\n";
         for (Card element: hand)
         {
@@ -147,11 +147,11 @@ public class Game {
         return cardinhand;
     }
     
-    public boolean straightflush(){//Method of Straight Flush
+    private boolean straightflush(){//Method of Straight Flush
         return (straight() && flush());
     }
     
-    public boolean pair(){//Method of Pair
+    private boolean pair(){//Method of Pair
         boolean dup = false;
         int counter = 0;
         for (int i = 0; i < hand.size() - 1; i++)
@@ -171,7 +171,7 @@ public class Game {
         return dup; 
     }
     
-    public boolean two(){ //Method for Two Pairs
+    private boolean two(){ //Method for Two Pairs
         int counter = 0;
         boolean dup = false; 
         for (int i = 0; i < hand.size() - 1; i ++)
@@ -188,7 +188,7 @@ public class Game {
         return dup;
     }
     
-    public boolean three(){//Method of Three of a kind
+    private boolean three(){//Method of Three of a kind
         int counter = 0;
         boolean dup = false; 
         for (int i = 0; i < hand.size() - 2; i++)
@@ -205,7 +205,7 @@ public class Game {
         return dup;
     }
     
-    public boolean four(){//Method of Four of a Kind
+    private boolean four(){//Method of Four of a Kind
         boolean dup = false;
         int counter = 0;
         for (int i = 0; i < 2; i++)
@@ -222,7 +222,7 @@ public class Game {
         return dup;
     }
  
-    public boolean full(){//Method of Full House
+    private boolean full(){//Method of Full House
         boolean dup = false;
         if (hand.get(0).ranks() == hand.get(1).ranks()
            && hand.get(2).ranks() == hand.get(4).ranks())
@@ -237,7 +237,7 @@ public class Game {
         return dup;
     }
     
-    public boolean flush(){//Method of Flush
+    private boolean flush(){//Method of Flush
         boolean dup = false;
         int counter = 0;
         for (int i = 1; i < hand.size(); i++)
@@ -254,7 +254,7 @@ public class Game {
         return dup;
     }
     
-    public boolean straight(){//Method of Straight 
+    private boolean straight(){//Method of Straight 
         boolean dup = false;
         int counter = 0;
         for (int i = 0; i < hand.size() - 1; i++)
@@ -271,7 +271,7 @@ public class Game {
         return dup;
     }
     
-    public boolean royal(){//Method of Royal Flush
+    private boolean royal(){//Method of Royal Flush
         boolean dup = false;
         for (int i = 1; i < hand.size() - 1; i++)
         {
@@ -286,7 +286,7 @@ public class Game {
         return dup;
     }
     
-    public void replace(){//Method to ask and replace cards
+    private void replace(){//Method to ask and replace cards
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < 5; i++)
         {
@@ -306,7 +306,7 @@ public class Game {
         }
     }
     
-    public void answer(){//Method to either play again or stop.
+    private void answer(){//Method to either play again or stop.
         Scanner input = new Scanner(System.in);
         System.out.print("Would you like to keep playing? (yes/no) : ");
         answer = input.next();
